@@ -203,7 +203,7 @@ class Roo::Excel < Roo::GenericSpreadsheet
     @cell[sheet][key] =
       case value_type
       when :float
-        v.to_f
+        v
       when :string
         v
       when :date
@@ -337,7 +337,7 @@ class Roo::Excel < Roo::GenericSpreadsheet
     case cell
     when Float, Integer, Fixnum, Bignum
       value_type = :float
-      value = cell.to_f
+      value = cell
     when String, TrueClass, FalseClass
       value_type = :string
       value = cell.to_s

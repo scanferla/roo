@@ -294,7 +294,7 @@ class Roo::Openoffice < Roo::GenericSpreadsheet
     @style[sheet][key] = style_name
     case @cell_type[sheet][key]
     when :float
-      @cell[sheet][key] = v.to_f
+      @cell[sheet][key] = v
     when :string
       @cell[sheet][key] = str_v
     when :date

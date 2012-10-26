@@ -379,7 +379,7 @@ class Roo::Excelx < Roo::GenericSpreadsheet
     @cell[sheet][key] =
       case @cell_type[sheet][key]
       when :float
-        v.to_f
+        v
       when :string
         v
       when :date

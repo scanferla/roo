@@ -279,7 +279,7 @@ class Roo::Google < Roo::GenericSpreadsheet
         ty = :date
       elsif numeric?(val)
         ty = :float
-        val = val.to_f
+        val = val
       elsif time?(val)
         ty = :time
         val = timestring_to_seconds(val)

@@ -182,7 +182,7 @@ class Roo::Excel2003XML < Roo::GenericSpreadsheet
     @cell[sheet][key] =
       case @cell_type[sheet][key]
       when :float
-        v.to_f
+        v
       when :string
         str_v
       when :datetime
@@ -235,7 +235,7 @@ class Roo::Excel2003XML < Roo::GenericSpreadsheet
             str_v = v
             case value_type
             when :number
-              v = v.to_f
+              v = v
               value_type = :float
             when :datetime
               if v =~ /^1899-12-31T(\d{2}:\d{2}:\d{2})/
